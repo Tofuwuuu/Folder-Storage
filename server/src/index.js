@@ -15,7 +15,11 @@ function sha256Hex(buf) {
 
 function toJson(maybeBytes) {
   if (maybeBytes == null) return null;
-  const s = Buffer.isBuffer(maybeBytes) ? maybeBytes.toString('utf8') : String(maybeBytes);
+  const buf =
+    Buffer.isBuffer(maybeBytes) ? maybeBytes
+    : maybeBytes instanceof Uint8Array ? Buffer.from(maybeBytes)
+    : null;
+  const s = buf ? buf.toString('utf8') : String(maybeBytes);
   try {
     return JSON.parse(s);
   } catch {

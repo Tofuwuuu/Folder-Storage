@@ -1,0 +1,166 @@
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 28px 18px 40px;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin-top: 6px;
+  opacity: 0.8;
+  font-size: 13px;
+}
+
+.identity {
+  display: grid;
+  gap: 6px;
+  justify-items: end;
+}
+
+.apiBase {
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.cardTitle {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.row {
+  display: flex;
+  align-items: end;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-size: 12px;
+  opacity: 0.95;
+}
+
+input,
+select,
+button {
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(0, 0, 0, 0.2);
+  color: inherit;
+  padding: 10px 12px;
+}
+
+button {
+  cursor: pointer;
+  background: rgba(100, 108, 255, 0.25);
+  border-color: rgba(100, 108, 255, 0.4);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.grow {
+  flex: 1 1 360px;
+}
+
+.status {
+  margin-top: 10px;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.list {
+  display: grid;
+  gap: 8px;
+}
+
+.listItem {
+  text-align: left;
+  background: rgba(0, 0, 0, 0.12);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.listItem.active {
+  outline: 2px solid rgba(100, 108, 255, 0.6);
+  outline-offset: 0;
+}
+
+.fileName {
+  font-weight: 700;
+}
+
+.fileMeta {
+  margin-top: 4px;
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+.muted {
+  font-size: 13px;
+  opacity: 0.75;
+}
+
+.details {
+  display: grid;
+  gap: 8px;
+}
+
+.details > div {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 10px;
+}
+
+.k {
+  opacity: 0.75;
+  font-size: 12px;
+}
+
+.v {
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 12px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .identity {
+    justify-items: start;
+  }
+}
